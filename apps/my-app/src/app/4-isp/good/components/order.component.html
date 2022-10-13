@@ -1,0 +1,21 @@
+<section *ngIf="(user$ | async) as user">
+  <img [src]=""/>
+  <span>User info</span>
+
+  <div>
+    <h3>Name</h3>
+    <span>{{ user.firstName }}</span>
+    <span>{{ user.lastName }}</span>
+  </div>
+
+  <div>
+    <h3>Contact</h3>
+    <span>Email: {{ user.email }}</span>
+  </div>
+
+  <div>
+    <h3>Order info</h3>
+    <span>Total money spent:</span>
+    <span>Is trusted:</span>
+  </div>
+</section>

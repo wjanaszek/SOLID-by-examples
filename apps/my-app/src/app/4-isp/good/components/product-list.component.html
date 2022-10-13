@@ -1,0 +1,14 @@
+<div *ngFor="let product of products$ | async">
+  <span>ID: {{ product.id }}</span>
+  <span>Name: {{ product.name }}</span>
+  <div>
+    <span>Actions:</span>
+    <button type="button" (click)="onEditProductClicked(product.id)">
+      Edit
+    </button>
+    <button type="button" (click)="onDeleteProductClicked(product.id)">
+      Delete
+    </button>
+  </div>
+</div>
+<button type="button" (click)="onCreateProductClicked()">Create</button>

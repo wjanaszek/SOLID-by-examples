@@ -1,0 +1,18 @@
+<table *ngIf="users$ | async as users">
+  <ng-container *ngFor="let user of users">
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+    </tr>
+    <tr (click)="goToDetails(user.id)">
+      <td><img [src]="" /></td>
+      <td>{{ user.id }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </ng-container>
+</table>

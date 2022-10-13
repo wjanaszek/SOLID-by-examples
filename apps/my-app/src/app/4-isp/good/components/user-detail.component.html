@@ -1,0 +1,21 @@
+<section
+  *ngIf="user$ | async as user"
+  [style.background-image]="user.photo.backgroundUrl"
+>
+  <img [src]="" />
+
+  <div>
+    <h3>ID</h3>
+    <span>{{ user.id }}</span>
+  </div>
+
+  <div>
+    <h3>Name</h3>
+    <span>{{ user.firstName }} {{ user.lastName }}</span>
+  </div>
+
+  <div>
+    <h3>Email</h3>
+    <span></span>
+  </div>
+</section>
